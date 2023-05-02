@@ -2,6 +2,14 @@
   <h1><%= @user.name %>'s Dashboard</h1>
 </div>
 
-<%= button_to "Discover Movies", method: :get %>
+<%= button_to "Discover Movies", user_discover_index_path(@user.id),  method: :get, local: true %>
 
-<h2>Viewing Parties: </h2>
+<div id="parties">
+  <h2>Viewing Parties: </h2>
+    <% @user.parties.each do |party| %>
+        <p>Movie id: <%= party.movie_id %> </p>
+        <p>Date: <%= party.date %> </p>
+        <p>Start time: <%= party.start_time.strftime("%I:%M") %> </p>
+        <p>Duration: <%= party.duration %> </p>
+    <% end %>
+</div>
