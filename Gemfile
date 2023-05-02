@@ -62,6 +62,7 @@ group :development, :test do
   gem "vcr"
   gem "rspec-rails"
   gem "shoulda-matchers"
+  gem "launchy"
 end
 
 group :development do
