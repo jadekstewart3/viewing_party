@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     if new_user.save
       redirect_to dashboard_path
     else
-      redirect_to "/register"
+      redirect_to register_path
       flash[:error] = error_message(new_user.errors)
     end 
   end

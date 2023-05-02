@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   add_flash_types :error, :success
 
   def current_user
-    @_current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
   private
