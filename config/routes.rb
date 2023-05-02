@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create] do 
     resources :discover, only: :index
+    resources :movies, only: [:index, :show] 
   end
 
   get "/dashboard", to: "users#show"
