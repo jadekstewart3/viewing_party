@@ -3,6 +3,6 @@
 <%=form_with url: "/users/#{@user.id}/movies", method: :get, local: true do |f|%>
   <%= f.label :title %>
   <%=f.text_field :title%>
-  <%=f.hidden_field :q, value: "keyword"  %>
+  <%=f.hidden_field :search, value: "keyword"  %>
   <%=f.submit "Find Movies" %>
 <% end %>
