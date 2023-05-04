@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=746c7a31ff4c8c1d8bb8a357566a0873&query=Ponyo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 04 May 2023 21:52:27 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=26578
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 70a252547bd4fd414b53058a5e3dfd76
+      X-Memc-Age:
+      - '5039'
+      X-Memc-Expires:
+      - '18306'
+      Etag:
+      - W/"66d095c23117b522ecc650ed82307ddd"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 a70648d67d4a5a7f7eed7b14595ab4fe.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - oDUaag3eCVl99ec4LruIIcXGfXrn6fb6eFUemER_aVjXJyRbTXs2Nw==
+      Age:
+      - '1625'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJwYWdlIjoxLCJyZXN1bHRzIjpbeyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvc2hxTGVJa3FQQUFYTThpVDZ3VkRpWFVZejFwLmpwZyIsImdlbnJlX2lkcyI6WzE2LDE0LDEwNzUxXSwiaWQiOjEyNDI5LCJvcmlnaW5hbF9sYW5ndWFnZSI6ImphIiwib3JpZ2luYWxfdGl0bGUiOiLltJbjga7kuIrjga7jg53jg4vjg6ciLCJvdmVydmlldyI6IldoZW4gU29zdWtlLCBhIHlvdW5nIGJveSB3aG8gbGl2ZXMgb24gYSBjbGlmZnRvcCBvdmVybG9va2luZyB0aGUgc2VhLCByZXNjdWVzIGEgc3RyYW5kZWQgZ29sZGZpc2ggbmFtZWQgUG9ueW8sIGhlIGRpc2NvdmVycyBtb3JlIHRoYW4gaGUgYmFyZ2FpbmVkIGZvci4gUG9ueW8gaXMgYSBjdXJpb3VzLCBlbmVyZ2V0aWMgeW91bmcgY3JlYXR1cmUgd2hvIHllYXJucyB0byBiZSBodW1hbiwgYnV0IGV2ZW4gYXMgc2hlIGNhdXNlcyBjaGFvcyBhcm91bmQgdGhlIGhvdXNlLCBoZXIgZmF0aGVyLCBhIHBvd2VyZnVsIHNvcmNlcmVyLCBzY2hlbWVzIHRvIHJldHVybiBQb255byB0byB0aGUgc2VhLiIsInBvcHVsYXJpdHkiOjQ0LjQ2OSwicG9zdGVyX3BhdGgiOiIveXA4dkVaZmxHeW5sRXlseEVlc2JZYXNjMDZpLmpwZyIsInJlbGVhc2VfZGF0ZSI6IjIwMDgtMDctMTkiLCJ0aXRsZSI6IlBvbnlvIiwidmlkZW8iOmZhbHNlLCJ2b3RlX2F2ZXJhZ2UiOjcuNzMzLCJ2b3RlX2NvdW50IjozNTkxfSx7ImFkdWx0IjpmYWxzZSwiYmFja2Ryb3BfcGF0aCI6bnVsbCwiZ2VucmVfaWRzIjpbOTldLCJpZCI6NzAwMzAyLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImphIiwib3JpZ2luYWxfdGl0bGUiOiLjg53jg4vjg6fjga/jgZPjgYbjgZfjgabnlJ/jgb7jgozjgZ8g44CcIOWuru+okemnv+OBruaAneiAg+mBjueoiyDjgJwiLCJvdmVydmlldyI6IkEgYmVoaW5kLXRoZS1zY2VuZXMgZG9jdW1lbnRhcnkgZGlyZWN0ZWQgYnkgS2FrdSBBcmFrYXdhLCBkb2N1bWVudGluZyBIYXlhbyBNaXlhemFraSdzIGNyZWF0aXZlIHByb2Nlc3MgaW4gY3JlYXRpbmcgdGhlIGNoYXJhY3RlciBvZiBQb255byBkdXJpbmcgdGhlIHByb2R1Y3Rpb24gb2YgUG9ueW8gb24gdGhlIENsaWZmIGJ5IHRoZSBTZWEuIiwicG9wdWxhcml0eSI6Mi4zNjgsInBvc3Rlcl9wYXRoIjoiL2VmNkxTQjNxZE5QWjBXVURoNmM5d2drYmZMNS5qcGciLCJyZWxlYXNlX2RhdGUiOiIyMDA5LTEyLTA4IiwidGl0bGUiOiJIb3cgUG9ueW8gd2FzIEJvcm4gfkhheWFvIE1peWF6YWtpJ3MgVGhvdWdodCBQcm9jZXNzfiIsInZpZGVvIjpmYWxzZSwidm90ZV9hdmVyYWdlIjo4LjAsInZvdGVfY291bnQiOjN9LHsiYWR1bHQiOmZhbHNlLCJiYWNrZHJvcF9wYXRoIjoiL2NpdzZKU0xrQTVVTG9hanpCakRpTzJ6ZHdxLmpwZyIsImdlbnJlX2lkcyI6Wzk5LDEwNDAyLDEwNzcwXSwiaWQiOjk3NDc1OCwib3JpZ2luYWxfbGFuZ3VhZ2UiOiJmciIsIm9yaWdpbmFsX3RpdGxlIjoiSGlzYWlzaGkgU3ltcGhvbmlxdWUiLCJvdmVydmlldyI6IkphcGFuZXNlIHBpYW5pc3QgYW5kIGNvbXBvc2VyIEpvZSBIaXNhaXNoaSBjb25kdWN0cyB0aGUgT3JjaGVzdHJlIFBoaWxoYXJtb25pcXVlIGRlIFN0cmFzYm91cmcgYXQgdGhlIFBoaWxoYXJtb25pZSBkZSBQYXJpcywgcGVyZm9ybWluZyBoaXMgU3ltcGhvbnkgTm8uIDIsIGFuIGFycmFuZ2VtZW50IG9mIGEgcGllY2UgZnJvbSBQb255byAoMjAwOCkgYW5kIGEgc3ltcGhvbmljIHN1aXRlIGJhc2VkIG9uIHRoZSBzY29yZSBvZiBQcmluY2VzcyBNb25vbm9rZSAoMTk5NyksIHR3byBpY29uaWMgYW5kIGFjY2xhaW1lZCBmaWxtcyBieSBIYXlhbyBNaXlhemFraS4iLCJwb3B1bGFyaXR5IjowLjYsInBvc3Rlcl9wYXRoIjoiLzlhWDFwTDlIWktYWjBIUmFDbGlmNUo2aFdYdi5qcGciLCJyZWxlYXNlX2RhdGUiOiIyMDIyLTA2LTIyIiwidGl0bGUiOiJKb2UgSGlzYWlzaGkgaW4gQ29uY2VydDogUGFyaXMgUGhpbGhhcm1vbmllIiwidmlkZW8iOmZhbHNlLCJ2b3RlX2F2ZXJhZ2UiOjAuMCwidm90ZV9jb3VudCI6MH1dLCJ0b3RhbF9wYWdlcyI6MSwidG90YWxfcmVzdWx0cyI6M30=
+  recorded_at: Thu, 04 May 2023 22:19:32 GMT
+recorded_with: VCR 6.1.0

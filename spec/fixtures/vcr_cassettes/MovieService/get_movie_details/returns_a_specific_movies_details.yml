@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/129?api_key=746c7a31ff4c8c1d8bb8a357566a0873
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 04 May 2023 21:17:52 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=25635
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 51d78c785448952fbaac7e6edcee3c94
+      X-Memc-Age:
+      - '11953'
+      X-Memc-Expires:
+      - '15222'
+      Etag:
+      - W/"4c299bc71c1f007c9f64d8abd9651ecb"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 d9fe97589e952f97209f7a422c89d876.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN52-P2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - WZF0SNVoLUe0aVvKCQgTnZS_APYFDS9OqltTS75wvuCv-7TOllZwlQ==
+      Age:
+      - '3701'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhZHVsdCI6ZmFsc2UsImJhY2tkcm9wX3BhdGgiOiIvQWI4bWtIbWtZQURqVTd3UWlPa2lhOUJ6R3ZTLmpwZyIsImJlbG9uZ3NfdG9fY29sbGVjdGlvbiI6bnVsbCwiYnVkZ2V0IjoxOTAwMDAwMCwiZ2VucmVzIjpbeyJpZCI6MTYsIm5hbWUiOiJBbmltYXRpb24ifSx7ImlkIjoxMDc1MSwibmFtZSI6IkZhbWlseSJ9LHsiaWQiOjE0LCJuYW1lIjoiRmFudGFzeSJ9XSwiaG9tZXBhZ2UiOiJodHRwOi8vbW92aWVzLmRpc25leS5jb20vc3Bpcml0ZWQtYXdheSIsImlkIjoxMjksImltZGJfaWQiOiJ0dDAyNDU0MjkiLCJvcmlnaW5hbF9sYW5ndWFnZSI6ImphIiwib3JpZ2luYWxfdGl0bGUiOiLljYPjgajljYPlsIvjga7npZ7pmqDjgZciLCJvdmVydmlldyI6IkEgeW91bmcgZ2lybCwgQ2hpaGlybywgYmVjb21lcyB0cmFwcGVkIGluIGEgc3RyYW5nZSBuZXcgd29ybGQgb2Ygc3Bpcml0cy4gV2hlbiBoZXIgcGFyZW50cyB1bmRlcmdvIGEgbXlzdGVyaW91cyB0cmFuc2Zvcm1hdGlvbiwgc2hlIG11c3QgY2FsbCB1cG9uIHRoZSBjb3VyYWdlIHNoZSBuZXZlciBrbmV3IHNoZSBoYWQgdG8gZnJlZSBoZXIgZmFtaWx5LiIsInBvcHVsYXJpdHkiOjgxLjIwOCwicG9zdGVyX3BhdGgiOiIvMzl3bUl0SVdzZzVzWk15UlVITGtXQmN1VkNNLmpwZyIsInByb2R1Y3Rpb25fY29tcGFuaWVzIjpbeyJpZCI6MTAzNDIsImxvZ29fcGF0aCI6Ii9lUzc5cHNsbm9LYldnN3QzUE1BOWF5bDBiR3MucG5nIiwibmFtZSI6IlN0dWRpbyBHaGlibGkiLCJvcmlnaW5fY291bnRyeSI6IkpQIn1dLCJwcm9kdWN0aW9uX2NvdW50cmllcyI6W3siaXNvXzMxNjZfMSI6IkpQIiwibmFtZSI6IkphcGFuIn1dLCJyZWxlYXNlX2RhdGUiOiIyMDAxLTA3LTIwIiwicmV2ZW51ZSI6Mjc0OTI1MDk1LCJydW50aW1lIjoxMjUsInNwb2tlbl9sYW5ndWFnZXMiOlt7ImVuZ2xpc2hfbmFtZSI6IkphcGFuZXNlIiwiaXNvXzYzOV8xIjoiamEiLCJuYW1lIjoi5pel5pys6KqeIn1dLCJzdGF0dXMiOiJSZWxlYXNlZCIsInRhZ2xpbmUiOiIiLCJ0aXRsZSI6IlNwaXJpdGVkIEF3YXkiLCJ2aWRlbyI6ZmFsc2UsInZvdGVfYXZlcmFnZSI6OC41NDEsInZvdGVfY291bnQiOjE0MjM0fQ==
+  recorded_at: Thu, 04 May 2023 22:19:33 GMT
+recorded_with: VCR 6.1.0
