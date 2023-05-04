@@ -1,0 +1,9 @@
+<h1>Viewing Party</h1>
+
+<%= link_to "Home", root_path, method: :get %>
+
+<% @users.each do |user| %>
+  <%= link_to "#{user.name}", dashboard_path, method: :get%>
+<% end %>
+
+<%= button_to "Create New User", register_path, method: :get %>
