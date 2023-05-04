@@ -10,4 +10,32 @@ class MovieService
     end
     JSON.parse(response.body, symbolize_names: true)
   end
+
+  def movie_search(title)
+    response = connection.get("/3/search/movie?&query=#{title}") do |req|
+      req.params["api_key"] = ENV["movie_token"]
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_movie_details(id)
+    response = connection.get("/3/movie/#{id}") do |req|
+      req.params["api_key"] = ENV["movie_token"]
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_cast(id)
+    response = connection.get("/3/movie/#{id}/credits") do |req|
+      req.params["api_key"] = ENV["movie_token"]
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def get_reviews(id)
+    response = connection.get("/3/movie/#{id}/reviews") do |req|
+      req.params["api_key"] = ENV["movie_token"]
+    end
+    JSON.parse(response.body, symbolize_names: true)
+  end
 end
