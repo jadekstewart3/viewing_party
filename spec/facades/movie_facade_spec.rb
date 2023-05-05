@@ -5,10 +5,11 @@ RSpec.describe MovieFacade do
     describe "get_top_rated_movies", :vcr do 
       it "returns a list of 20 top rated movies" do 
 
-        top_movies = MovieFacade.new({}).get_top_rated_movies
+        top_movies = MovieFacade.new.get_top_rated_movies
       
         top_movies.each do |movie|
           expect(movie).to be_a(Movie)
+          expect(movie.movie_id).to be_an(Integer)
           expect(movie.title).to be_a(String)
           expect(movie.vote_average).to be_a(Float)
           expect(movie.runtime).to be(nil)
@@ -23,7 +24,7 @@ RSpec.describe MovieFacade do
 
     describe "get_searched_movies", :vcr do 
       it "returns a list of searched movies" do
-        searched_movies = MovieFacade.new(search: "Ponyo").get_searched_movies
+        searched_movies = MovieFacade.new.get_searched_movies(title: "ponyo")
 
         searched_movies.each do |movie|
           expect(movie).to  be_a(Movie)
@@ -41,11 +42,11 @@ RSpec.describe MovieFacade do
 
     describe "get_movie_details", :vcr do 
       it "returns a movies full details" do 
-        movie = MovieFacade.new(movie_id: 129).get_movie_details
+        movie = MovieFacade.new.get_movie_details(129)
 
         expect(movie.title).to be_a(String)
         expect(movie.vote_average).to be_a(Float)
-        expect(movie.runtime).to be_an(Integer)
+        expect(movie.runtime).to be_an(String)
         expect(movie.genres).to be_an(Array)
         expect(movie.summary).to be_a(String)
         expect(movie.cast).to be_an(Array)

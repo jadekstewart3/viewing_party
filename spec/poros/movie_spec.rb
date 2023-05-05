@@ -4,7 +4,7 @@ RSpec.describe Movie do
   describe "instance methods" do 
     describe "#initalize", :vcr do 
       before :each do 
-        @spirited_away = MovieFacade.new(movie_id: 1001196).get_movie_details
+        @spirited_away = MovieFacade.new.get_movie_details(1001196)
       end
       it "exists" do 
         expect(@spirited_away).to be_a(Movie)
