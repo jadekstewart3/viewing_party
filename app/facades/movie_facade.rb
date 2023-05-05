@@ -1,11 +1,9 @@
 class MovieFacade
-  attr_reader :search,
-              :movie_id
 
-  def initialize(params = {})
-    @word = params[:search]
-    @movie_id = params[:movie_id]
-  end
+  # def initialize(params = {})
+  #   @word = params[:search]
+  #   @movie_id = params[:movie_id]
+  # end
 
   def get_top_rated_movies
     top_rated = MovieService.new.top_rated
@@ -15,29 +13,30 @@ class MovieFacade
     end
   end
 
-  def get_searched_movies
-    searched = MovieService.new.movie_search(@word)
+  def get_searched_movies(keyword)
+    searched = MovieService.new.movie_search(keyword)
     searched[:results][0..19].map do |movie|
       searched_movies =  { movie: movie }
       Movie.new(searched_movies)
     end
   end
 
-  def get_movie_details
+  def get_movie_details(movie_id)
     movie_info = {
-    movie: movie_deets,
-    cast:  first_10_cast_members,
-    reviews: review_info,
-    total_reviews: review_info.count
+    movie: movie_deets(movie_id),
+    cast:  first_10_cast_members(movie_id),
+    reviews: review_info(movie_id),
+    total_reviews: review_info(movie_id).count
     }
     Movie.new(movie_info)
   end
 
   private
 
-  def movie_deets
-    movie = MovieService.new.get_movie_details(@movie_id)
-    movie_details = { title: movie[:title],
+  def movie_deets(movie_id)
+    movie = MovieService.new.get_movie_details(movie_id)
+    movie_details = { id: movie[:id],
+                      title: movie[:title],
                       vote_average: movie[:vote_average],
                       runtime: movie[:runtime],
                       genres: movie[:genres].map { |genre| genre[:name] },
@@ -45,8 +44,8 @@ class MovieFacade
                     }
   end
 
-  def first_10_cast_members
-    cast_members = MovieService.new.get_cast(@movie_id)
+  def first_10_cast_members(movie_id)
+    cast_members = MovieService.new.get_cast(movie_id)
     cast_members[:cast].take(10).map do |member|
       cast = { name: member[:name],
             character: member[:character]
@@ -54,8 +53,8 @@ class MovieFacade
     end
   end
 
-  def review_info
-    reviews = MovieService.new.get_reviews(@movie_id)
+  def review_info(movie_id)
+    reviews = MovieService.new.get_reviews(movie_id)
     reviews[:results].map do |review|
       info =  { author: review[:author],
                 review: review[:content]}
