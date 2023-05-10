@@ -22,12 +22,11 @@ class Movie
   end
 
   private
-
   def formatted_runtime(runtime)
     unless runtime == nil
       hours = runtime / 60
       minutes = runtime % 60
-      return "#{hours} hours #{minutes} minutes"
+      return "#{hours}:#{minutes}"
     end
   end
 end

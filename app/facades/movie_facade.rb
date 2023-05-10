@@ -1,10 +1,5 @@
 class MovieFacade
 
-  # def initialize(params = {})
-  #   @word = params[:search]
-  #   @movie_id = params[:movie_id]
-  # end
-
   def get_top_rated_movies
     top_rated = MovieService.new.top_rated
     top_rated[:results][0..19].map do |movie|
