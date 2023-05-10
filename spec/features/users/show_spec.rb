@@ -5,8 +5,8 @@ RSpec.describe "Dashboard" do
     describe "When I visit my dashboard" do
 
       before :each do 
-        @amy = User.create!(name: "Amy", email: "amy_from_mars@gmail.com", password: "ilovemars", host: true) 
-        @phil = User.create!(name: "Philip", email: "philipjfry@gmail.com", password: "ilovejade", host: false) 
+        @amy = User.create!(name: "Amy", email: "amy_from_mars@gmail.com", password: "ilovemars") 
+        @phil = User.create!(name: "Philip", email: "philipjfry@gmail.com", password: "ilovejade") 
         @spirited_away = Party.create!(date: "05/28/2023", start_time: Time.now, duration: 2, movie_id: 1) 
 
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@amy)
@@ -36,7 +36,7 @@ RSpec.describe "Dashboard" do
 
         expect(page).to have_content("Movie id: #{@spirited_away.movie_id}")
         expect(page).to have_content("Date: #{@spirited_away.date}")
-        expect(page).to have_content("Start time: #{@spirited_away.start_time.strftime('%I:%M')}")
+        expect(page).to have_content("Start time: #{@spirited_away.start_time}")
         expect(page).to have_content("Duration: #{@spirited_away.duration}")
       end
     end
