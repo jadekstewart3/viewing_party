@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_02_195058) do
 
   create_table "parties", force: :cascade do |t|
     t.string "date"
-    t.time "start_time"
+    t.string "start_time"
     t.integer "duration"
     t.integer "movie_id"
     t.datetime "created_at", null: false
@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_02_195058) do
   create_table "party_users", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "party_id", null: false
+    t.boolean "host"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["party_id"], name: "index_party_users_on_party_id"
@@ -36,7 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_02_195058) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.boolean "host"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
