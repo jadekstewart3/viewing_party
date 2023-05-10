@@ -13,7 +13,7 @@ RSpec.describe Movie do
       it "has attributes" do 
         expect(@spirited_away.title).to eq("Spirited Away: Live on Stage")
         expect(@spirited_away.vote_average).to eq(8.2)
-        expect(@spirited_away.runtime).to eq("2 hours 55 minutes")
+        expect(@spirited_away.runtime).to eq("2:55")
         expect(@spirited_away.genres).to eq(["Drama", "Adventure", "Family", "Fantasy"])
         expect(@spirited_away.summary).to eq("A young girl named Chihiro finds herself trapped in a mysterious world inhabited by spirits and when her parents are turned into pigs, she must rescue them. The movie version of the stage production was filmed during the play’s 2022 run at the Imperial Theatre in Tokyo." )
         expect(@spirited_away.cast).to be_an(Array)
