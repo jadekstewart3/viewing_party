@@ -9,5 +9,7 @@
 	<p><%= f.label :start_time, "Time" %></p>
 	<p><%= f.time_field :start_time %></p>
 	<p><%= f.collection_check_boxes :users, @users.reject { |user| user == current_user }, :id, :name %></p>
+  <%= f.hidden_field :movie_title, value: @movie.title %>
+  <%= f.hidden_field :poster_path, value: @movie.poster_path %>
 	<p><%= f.submit "Create Party" %></p>
 <% end %>
