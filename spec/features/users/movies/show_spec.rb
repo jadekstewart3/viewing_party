@@ -8,6 +8,7 @@ RSpec.describe "Movie Details Page", :vcr do
         visit user_movie_path(@phil, 129)
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@phil)
       end
+      
       it "displays the movie's attributes" do 
         expect(page).to have_content("Spirited Away")
         expect(page).to have_content("Summary:")
