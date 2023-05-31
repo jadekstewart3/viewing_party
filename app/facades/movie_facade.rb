@@ -35,7 +35,8 @@ class MovieFacade
                       vote_average: movie[:vote_average],
                       runtime: movie[:runtime],
                       genres: movie[:genres].map { |genre| genre[:name] },
-                      summary: movie[:overview]
+                      summary: movie[:overview],
+                      poster_path: movie[:poster_path]
                     }
   end
 
