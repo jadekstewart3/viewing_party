@@ -6,11 +6,32 @@
 
 <div id="parties">
   <h2>Viewing Parties: </h2>
-    <% @user.parties.each do |party| %>
-
-        <p>Movie id: <%= party.movie_id %> </p>
+  <h3>Parties I'm Hosting:</h3>
+    <% @user.my_parties.each do |party| %>
+        <p>Movie: <%= party.movie_title%> </p>
         <p>Date: <%= party.date %> </p>
         <p>Start time: <%= party.start_time %> </p>
         <p>Duration: <%= party.duration %> </p>
+        <img src=<%= "https://image.tmdb.org/t/p/w200#{party.poster_path}" %>>
+        <h3>Attendees:</h4>
+        <% party.users.each do |user| %>
+          <p><%= user.name unless user.name == @user.name %></p>
+        <% end %>
+    <% end %>
+
+    <h3>Parties I'm Attending:</h3>
+    <% @user.party_invites.each do |party| %>
+        <p>Movie: <%= party.movie_title%> </p>
+        <p>Date: <%= party.date %> </p>
+        <p>Start time: <%= party.start_time %> </p>
+        <p>Duration: <%= party.duration %> </p>
+        <img src=<%= "https://image.tmdb.org/t/p/w200#{party.poster_path}" %>>
+        <% party.users.each do |user| %>
+          <% if user == @user%>
+            <p><b><%= user.name %></p><b>
+          <% else %>
+            <p><%= user.name %></p>
+          <% end %>
+        <% end %>
     <% end %>
 </div>
