@@ -7,7 +7,8 @@ class Movie
               :summary,
               :cast,
               :total_reviews,
-              :review_info
+              :review_info,
+              :poster_path
 
   def initialize(details)
     @movie_id = details[:movie][:id]
@@ -19,6 +20,7 @@ class Movie
     @cast = details[:cast]
     @total_reviews = details[:total_reviews]
     @review_info = details[:reviews]
+    @poster_path = details[:movie][:poster_path]
   end
 
   private
