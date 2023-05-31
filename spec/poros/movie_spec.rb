@@ -19,6 +19,7 @@ RSpec.describe Movie do
         expect(@spirited_away.cast).to be_an(Array)
         expect(@spirited_away.total_reviews).to eq(0)
         expect(@spirited_away.review_info).to be_an(Array)
+        expect(@spirited_away.poster_path).to be_a(String)
       end
     end
   end
