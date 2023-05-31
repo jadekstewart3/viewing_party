@@ -52,6 +52,7 @@ RSpec.describe MovieFacade do
         expect(movie.cast).to be_an(Array)
         expect(movie.total_reviews).to be_an(Integer)
         expect(movie.review_info).to be_an(Array)
+        expect(movie.poster_path).to be_a(String)
       end
     end
   end
