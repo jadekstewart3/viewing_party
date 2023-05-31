@@ -4,9 +4,9 @@ RSpec.describe  "Welcome Page" do
   describe "As a visitor" do
     describe "When I visit the welcome page" do
 
-      let!(:phil) { User.create!(name: "Phil", email: "philipjfry@gmail.com", password: "pizzabeer", host: true) }
-      let!(:amy) { User.create!(name: "Amy", email: "amy_from_mars@gmail.com", password: "ilovemars", host: false) }
-      let!(:zoidberg) { User.create!(name: "Zoidberg", email: "dr_zoidberg_whoop_whoop_whoop_whoop@gmail.com", password: "whoopwhoop", host: false) }
+      let!(:phil) { User.create!(name: "Phil", email: "philipjfry@gmail.com", password: "pizzabeer") }
+      let!(:amy) { User.create!(name: "Amy", email: "amy_from_mars@gmail.com", password: "ilovemars") }
+      let!(:zoidberg) { User.create!(name: "Zoidberg", email: "dr_zoidberg_whoop_whoop_whoop_whoop@gmail.com", password: "whoopwhoop") }
 
       before :each do 
         visit root_path
@@ -29,7 +29,7 @@ RSpec.describe  "Welcome Page" do
         expect(page).to have_link(phil.name.to_s)
         expect(page).to have_link(amy.name.to_s)
         expect(page).to have_link(zoidberg.name.to_s)
-
+     
         click_link "Phil"
 
         expect(current_path).to eq(dashboard_path)

@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=746c7a31ff4c8c1d8bb8a357566a0873&query=%7B:title=%3E%22ponyo%22%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 05 May 2023 15:44:55 GMT
+      Server:
+      - openresty
+      Cache-Control:
+      - public, max-age=24545
+      X-Memc:
+      - MISS, STORE
+      X-Memc-Key:
+      - 204c7ecf4cf52a351c5c6c1762951ab5
+      X-Memc-Age:
+      - '0'
+      X-Memc-Expires:
+      - '24545'
+      Etag:
+      - W/"0e23279b004381f72a34159d5c7dfd1f"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 cddde15c11afac53ac9fe7978dcfecd6.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - CHVCn4i4i9BjUhnVXXxml-MxGchOPNaVQPhpZnHyfj-bvTWiRYg-Fw==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"page":1,"results":[],"total_pages":1,"total_results":0}'
+  recorded_at: Fri, 05 May 2023 15:44:55 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,8 @@
+<h1>Movie Results</h1>
+
+<%= link_to "Discover Page", user_discover_index_path(@user), method: :get, local: true %>
+
+<% @movies.each do |movie|  %>
+  <h5>Title: <%= link_to "#{movie.title}", user_movie_path(@user, id: movie.movie_id), method: :get, local: true %></h5>
+  <p>Vote Average: <%= movie.vote_average %></p>
+<% end %>

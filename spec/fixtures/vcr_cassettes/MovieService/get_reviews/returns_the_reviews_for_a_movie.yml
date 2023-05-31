@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/129/reviews?api_key=746c7a31ff4c8c1d8bb8a357566a0873
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - f1ceb223e5cd3ee7c43ee5adf8abd1d9
+      X-Memc-Age:
+      - '19259'
+      X-Memc-Expires:
+      - '9132'
+      Date:
+      - Fri, 05 May 2023 15:42:44 GMT
+      Cache-Control:
+      - public, max-age=25393
+      Etag:
+      - W/"dce82b7461c6b8742933941d6cddfae8"
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 e1b5abb53c407f0a057625c46693461c.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Amz-Cf-Id:
+      - QG9T4i0QH9SfUk0jj8HLT1xSWHh8IQQPIazThT2hG-1JqgHRjqV8ow==
+      Age:
+      - '1078'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":129,"page":1,"results":[{"author":"ZeBlah","author_details":{"name":"ZeBlah","username":"TheBlah","avatar_path":"/d7rZv7xFhXHy0OLbVc2byJiZwEU.jpg","rating":10.0},"content":"One
+        of the great \"masters\" of the anime art. Somehow, if I would personally
+        associate \"Akira\" to \"self-destruction\", then this anime would be the
+        opposite :)","created_at":"2019-06-29T20:24:51.877Z","id":"5d17c91385702e001eb921db","updated_at":"2021-06-23T15:58:23.763Z","url":"https://www.themoviedb.org/review/5d17c91385702e001eb921db"}],"total_pages":1,"total_results":1}'
+  recorded_at: Fri, 05 May 2023 16:00:42 GMT
+recorded_with: VCR 6.1.0
