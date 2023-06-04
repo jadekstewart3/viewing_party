@@ -1,25 +1,38 @@
-<%= button_to "Discover Page", user_discover_index_path(@user), method: :get %>
+  <center>
+    <%= button_to "Discover Page", user_discover_index_path(@user), method: :get, :class => "btn btn-success" %>
+    <%= button_to "Create Viewing Party", new_user_movie_party_path(@user, @movie.movie_id), method: :get, local: true,  :class => "btn btn-secondary" %>
+  </center>
+<center>
 
-<h1><%= @movie.title %></h1>
-<p>Summary: <%= @movie.summary %></p>
-<p>Runtime: <%= @movie.runtime %></p>
-<p>Vote Average: <%= @movie.vote_average %></p>
+  <h1><%= @movie.title %></h1>
+  <h4 class=text-secondary> Summary:</h4> <p><%= @movie.summary %></p>
+    <br>
+  <h5 class=text-secondary> Runtime:</h5> <%= @movie.runtime %>
+    <br>
+    <br>
+  <h5 class=text-secondary>Vote Average:</h5> <%= @movie.vote_average %></h5>
+    <br>
+    <br>
+  <h5 class=text-secondary>Genres:</h5>
+  <% @movie.genres.each do |genre|%>
+    <p><%= genre %> </li>
+  <% end %>
+    <br>
+  <h5 class=text-secondary>Cast:</h5>
+  <% @movie.cast.each do |cast|%>
+    <p class=text-success> <%= "#{cast[:name]}" %></p>  <p class=text-warning> <b class=text-muted>Character:</b> <%= "#{cast[:character]}"%> </p>
+  <% end %>
 
-<p>Genres:</p>
-<% @movie.genres.each do |genre|%>
-  <li><%= genre %> </li>
-<% end %>
-
-<p>Cast:</p>
-<% @movie.cast.each do |cast|%>
-  <li><%= "#{cast[:name]} Character:#{cast[:character]}"%> </li>
-<% end %>
-
-<p>Reviews:</p>
-<% @movie.review_info.each do |review|%>
-  <li><%= "#{review[:author]}: #{review[:review]}" %> </li>
-<% end %>
-<p>Total Reviews:</p>
-<%= @movie.total_reviews %>
-
-<%= button_to "Create Viewing Party", new_user_movie_party_path(@user, @movie.movie_id), method: :get, local: true %>
+  <h5 class=text-secondary>Reviews:</h5>
+  <% @movie.review_info.each do |review|%>
+    <p class=text-primary>
+      <b><%= "#{review[:author].capitalize} Proclaims:"%><b>
+    </p> 
+    <p>
+      <%= "#{review[:review]}" %>
+    </p>
+  <% end %>
+  <h5 class=text-secondary>Total Reviews:
+    <div class=text-success> <%= @movie.total_reviews %> </div>
+  </h5>
+</center>

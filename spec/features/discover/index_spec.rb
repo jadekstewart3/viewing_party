@@ -14,9 +14,9 @@ RSpec.describe "Discover Movies" do
         expect(page).to have_button("Discover Top Rated Movies")
 
         click_button "Discover Top Rated Movies"
-
+        
         expect(current_path).to eq(user_movies_path(zoidberg))
-        expect(page).to have_content("Title", count: 20)
+        expect(page).to have_content("Vote Average:", count: 20)
       end
 
       it "displays a form to enter keywords to search by movie title" do
@@ -28,7 +28,7 @@ RSpec.describe "Discover Movies" do
         click_button "Find Movies"
 
         expect(current_path).to eq(user_movies_path(zoidberg))
-        expect(page).to have_content("Title", count: 20)
+        expect(page).to have_content("Vote Average:", count: 20)
       end
 
       it "when I click a movie title I am taken to the movie details page" do

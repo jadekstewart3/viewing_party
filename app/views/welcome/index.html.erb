@@ -1,9 +1,11 @@
-<h1>Viewing Party</h1>
 
-<%= link_to "Home", root_path, method: :get %>
+<center><h1 class="text-secondary">Viewing Party</h1></center>
 
+
+
+<center><h3 class="text-success">Party People:</h3></center>
 <% @users.each do |user| %>
-  <%= link_to "#{user.name}", dashboard_path, method: :get%>
+  <center><li> <%= link_to "#{user.name}", dashboard_path, method: :get%> </li></center>
 <% end %>
 
-<%= button_to "Create New User", register_path, method: :get %>
+ 
