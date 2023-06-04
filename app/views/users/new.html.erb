@@ -1,4 +1,8 @@
- <h1> Register </h1>
+ <center>
+  <h1 class="text-warning"> Register 
+    <small class="text-muted">Become a Party People!</small>
+  </h1>
+</center>
     
 <%= form_with model: @user do |form| %>
   <%= form.label :name, "Name:" %>
@@ -9,5 +13,9 @@
   <%= form.password_field :password %>
   <%= form.label :password_confirmation, "Password Confirmation:" %>
   <%= form.password_field :password_confirmation %>
-  <%= form.button "Register" %>
+  <%= form.button "Register", class: "btn btn-light" %>
 <% end %>
+
+<div style="text-align: center;">
+  <p>Already have an account? <%= button_to "Login Here", root_path, method: :get, class: "btn btn-secondary"%></p>
+</div>
